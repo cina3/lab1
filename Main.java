@@ -1,6 +1,18 @@
+import java.util.Random;    
+import java.util.Scanner;
+
 public class Main {
     public static void printMenu() {
-                boolean cont = false;
+        Scanner sc = new Scanner(System.in);
+        int[] arr = null;
+
+        System.out.print("Enter array size: ");
+        int size = 0;
+        if (sc.hasNextInt()) {
+            size = sc.nextInt();
+        }
+
+        boolean cont = false;
         if (size > 0) {
             cont = true;
             arr = createRandomArray(size);
@@ -63,7 +75,6 @@ public class Main {
         }
 
         sc.close();
-    }
     }
 
     public static int[] createRandomArray(int arraySize) {
